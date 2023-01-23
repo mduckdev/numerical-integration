@@ -39,7 +39,7 @@ body {
     padding: 10px;
     background: #CCDBFD;
     border-radius: 20px;
-    border: #ABC4FF 1px solid;
+    border: #355cbf 1px solid;
 }
 
 .inputs {
@@ -110,6 +110,7 @@ ul li::before {
 
 .input-container {
     position: relative;
+    min-height: 4vh;
 }
 
 .input-container label {
@@ -132,11 +133,20 @@ ul li::before {
 .input-container input:focus {
     border: none;
     outline: none;
-    border: 1px solid #759eff;
+    border: 2px solid #355cbf;
+}
+
+.input-container:focus-within,
+.marg-top-1 {
+    margin-top: 1.3vh;
 }
 
 .input-container input:focus~label,
 .input-container input:valid~label {
-    top: -3.2vh;
+    top: -3.3vh;
     font-size: 12px;
+}
+
+.first {
+    margin-top: 0 !important;
 }
