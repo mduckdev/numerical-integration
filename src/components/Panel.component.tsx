@@ -28,6 +28,9 @@ const Panel = () => {
         item = item.replaceAll("PI", "\\Pi");
         item = item.replaceAll("exp ", "e^");
         item = item.replaceAll("sqrt ", "\\sqrt");
+        item = item.replaceAll("(", "{");
+        item = item.replaceAll(")", "}");
+
         return item;
     }
     const handleInput = (e: React.ChangeEvent<HTMLInputElement>, source: SourceEnum) => {

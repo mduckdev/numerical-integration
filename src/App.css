@@ -45,10 +45,10 @@ body {
 .inputs {
     display: flex;
     justify-content: space-evenly;
-    flex-flow: column wrap;
+    flex-flow: column;
     width: 25%;
     border-left: 1px solid #B6CCFE;
-    padding: 10%;
+    padding: clamp(20px, 10%, 175px);
     overflow: hidden;
 }
 
@@ -80,6 +80,7 @@ ul li::before {
 
 .calculateButton {
     min-width: 100%;
+    max-width: 100%;
     border-radius: 20px;
     border: none;
     padding: 10px;
@@ -109,6 +110,7 @@ ul li::before {
 }
 
 .input-container {
+    max-width: 100%;
     position: relative;
     min-height: 4vh;
 }
@@ -116,16 +118,19 @@ ul li::before {
 .input-container label {
     position: absolute;
     top: 0px;
-    line-height: 4.5vh;
     left: 15px;
-    font-size: 85%;
     color: rgb(28, 34, 59);
+    font-size: 85%;
     transition: all 0.5s ease-in-out;
     pointer-events: none;
+    line-height: 100%;
+    line-height: 4.5vh;
+    white-space: nowrap;
 }
 
 .input-container input {
-    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     height: 4.5vh;
 }
@@ -138,7 +143,7 @@ ul li::before {
 
 .input-container:focus-within,
 .marg-top-1 {
-    margin-top: 1.3vh;
+    margin-top: 1.5vh;
 }
 
 .input-container input:focus~label,
@@ -149,4 +154,8 @@ ul li::before {
 
 .first {
     margin-top: 0 !important;
+}
+
+.radio-container {
+    max-height: fit-content;
 }
